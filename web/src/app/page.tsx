@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <div className='flex justify-center gap-4 sm:gap-12 md:gap-24 font-medium text-secondary-foreground'>
-        <div className='w-1/3 text-center'>
+        <div className='w-full md:w-1/3 text-center'>
           {GAMES.map((game) => (
             <GamePreviewCard
               key={game.title}
