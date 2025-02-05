@@ -126,3 +126,16 @@ body{
   background-color: #121e45;
   color: aliceblue;
 }
+
+@media (min-width: 2000px) {
+  html {
+    background-color: #121e45 !important;
+  }
+  .bg-background {
+    background-color: #121e45 !important;
+  }
+  header, main {
+    max-width: 2000px;
+    margin: auto;
+  }
+}
