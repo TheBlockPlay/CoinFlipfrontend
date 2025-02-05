@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const ZK_CONTRACT = '03daafab238ef480e4dabe7588ac0839e0649b6c32';
+const ZK_CONTRACT = process.env.CONTRACT_ADDRESS!;
 
 interface Props{
 

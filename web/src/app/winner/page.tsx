@@ -15,7 +15,7 @@ export default async function WinnerGame() {
   const settings = getPendingGameSettings();
   // Fetch the contract state
   const contract: any = await getContractState(
-    '0338bd7fd7a04b70cd185c702318e0a81128e2fa44', 
+    process.env.CONTRACT_ADDRESS!, 
     deserializeCoinFlipState
   );
   const winners = contract?.serializedContract?.openState?.openState?.data?.winners;

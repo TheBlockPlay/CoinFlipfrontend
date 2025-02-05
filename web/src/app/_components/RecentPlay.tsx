@@ -8,13 +8,13 @@ import React, { useEffect, useState } from 'react'
 export default function RecentPlay() {
     const [transactions, setTransactions] = useState([]);
     const identity = useIdentity();
-    const url = 'https://browser.testnet.partisiablockchain.com/transactions/';
+    const url = 'https://browser.partisiablockchain.com/transactions/';
     useEffect(() => {
         getTransactions();
     }, []);
 
     const getTransactions = async () => {
-        const transactionData = await getTransactionsByAddress('03818281bbf60e11c2e3c6172027e8b2b793df6d12');
+        const transactionData = await getTransactionsByAddress(process.env.CONTRACT_ADDRESS!);
         setTransactions(transactionData)
         console.log(transactionData)
     }

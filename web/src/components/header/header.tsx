@@ -21,7 +21,7 @@ export const Header: FC = async () => {
               Flip Coin
             </div>
 
-            <span className='text-xs text-muted-foreground text-red-800'>(testnet)</span>
+            <span className='text-xs text-muted-foreground text-red-800'>(mainnet)</span>
           </Link>
         </div>
         <div className='mx-auto flex items-center gap-4 text-sm'></div>

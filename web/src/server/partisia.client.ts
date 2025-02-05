@@ -73,7 +73,7 @@ export type PublicContractState<State> = ContractData<
 
 const numberOfShards = 3;
 
-const READER_URL = 'https://node1.testnet.partisiablockchain.com';
+const READER_URL = process.env.READER_URL;
 export const getContractState = async <T = string>(
   contract: string,
   stateMapper?: (state: StateBytes) => T,
