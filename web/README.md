@@ -2,7 +2,7 @@
 
 This directory contains the frontend code for the Flip Coin project.
 
-The frontend is deployed on both Netlify and Vercel and is currently configured to work with the Partisia Blockchain Testnet.
+The frontend is deployed on both Netlify and Vercel and is currently configured to work with the Partisia Blockchain.
 
 
 ## Getting Started
