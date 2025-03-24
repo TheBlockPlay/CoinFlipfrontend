@@ -13,9 +13,7 @@ const IdentityContext = React.createContext<IdentityContextType>({
 
 export const useIdentity = () => React.useContext(IdentityContext).identity;
 
-export const IdentityProvider: React.FC<
-  PropsWithChildren<IdentityContextType>
-> = ({ children, identity }) => {
+export const IdentityProvider: React.FC<PropsWithChildren<IdentityContextType>> = ({ children, identity }) => {
   return (
     <IdentityContext.Provider value={{ identity }}>
       {children}

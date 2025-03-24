@@ -33,7 +33,7 @@ export const deployGame = async (
 ): Promise<ChainAction> => {
   if(choice == undefined) return Promise.reject('Choice is required');
   const blockchainAddress= BlockchainAddress.fromString(account);
-  getGameMasterInit(blockchainAddress);
+  getFlipCoinInit(blockchainAddress);
   console.log(cost , choice)
   const deployment = startGameAndPlaceBet(
     cost,
@@ -97,12 +97,13 @@ export const payoutApprove = async (
   const bnAmount= new BN(amount);
   const blockchainAddress= BlockchainAddress.fromString(account);
   const deployment = approve(blockchainAddress,bnAmount);
+  console.log("Deployment ->",deployment)
   return payloadToChainAction(account, contract, deployment, {
     cost: GAS_DEPLOYMENT_COST,
   });
 };
 
-const getGameMasterInit = (address:BlockchainAddress): Buffer => {
+const getFlipCoinInit = (address:BlockchainAddress): Buffer => {
   return initialize(address);
 };
 

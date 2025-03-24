@@ -1,7 +1,5 @@
 import { ServerIdentityProvider } from '@/components/context/identity/server-identity-provider';
 import { getPendingGameSettings } from '@/server/create-arcade/get-pending-game-settings';
-import { GAMES } from '@/config';
-import { GamePreviewCard } from '../_components/game-preview-card';
 import { PayoutWinnerButton } from '../_components/payout-winner-button';
 import { getContractState } from '@/server/partisia.client';
 import { deserializeCoinFlipState } from '@/contracts_gen/clients/flip-coin';
@@ -15,7 +13,7 @@ export default async function WinnerGame() {
   const settings = getPendingGameSettings();
   // Fetch the contract state
   const contract: any = await getContractState(
-    process.env.CONTRACT_ADDRESS!, 
+    process.env.CONTRACT_ADDRESS!,
     deserializeCoinFlipState
   );
   const winners = contract?.serializedContract?.openState?.openState?.data?.winners;
@@ -23,16 +21,16 @@ export default async function WinnerGame() {
   const addressToHex = (blockchainAddress: BlockchainAddress): string => {
     // Check if toString() method exists
     const addressString = blockchainAddress.toString();
-    return addressString; 
+    return addressString;
   };
 
-  const userAddressHex = addressToHex(address); 
+  const userAddressHex = addressToHex(address);
   let isWinner = false;
   if (winners) {
     for (const [winnerAddress, value] of winners.entries()) {
-      const winnerHex = addressToHex(winnerAddress);  
+      const winnerHex = addressToHex(winnerAddress);
       if (winnerHex === userAddressHex) {
-        isWinner = true;  
+        isWinner = true;
         break;
       }
     }
@@ -42,12 +40,6 @@ export default async function WinnerGame() {
     <>
       <div className='flex justify-center gap-4'>
         <div className='w-1/3 text-center'>
-          {GAMES.map((game) => (
-            <GamePreviewCard
-              key={game.title}
-              game={game}
-            />
-          ))}
           <h2 className='mb-6 text-2xl text-center font-bold mt-5'>
             {winners ? (
               isWinner

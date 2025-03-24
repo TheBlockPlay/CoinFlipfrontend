@@ -1,13 +1,11 @@
 
 "use client";
-import { useIdentity } from '@/components/context/identity/identity.context';
 import { ACTIONS } from '@/constants';
 import { getTransactionsByAddress } from '@/server/game/get-game-contract-by-transaction'
 import React, { useEffect, useState } from 'react'
 
 export default function RecentPlay() {
     const [transactions, setTransactions] = useState([]);
-    const identity = useIdentity();
     const url = 'https://browser.partisiablockchain.com/transactions/';
     useEffect(() => {
         getTransactions();

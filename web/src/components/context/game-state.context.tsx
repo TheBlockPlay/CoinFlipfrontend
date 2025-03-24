@@ -20,7 +20,7 @@ const GameStateContext = React.createContext<GameStateContextType>(null);
 export const useGameState = (): NonNullable<GameStateContextType> =>
   React.useContext(GameStateContext)!;
 
-const REFRESH_INTERVAL = 5_000;
+const REFRESH_RATE = 5_000;
 export const GameStateProvider: React.FC<
   PropsWithChildren<{ id: string; defaultGameState: GameState }>
 > = ({ children, id, defaultGameState }) => {
@@ -32,7 +32,7 @@ export const GameStateProvider: React.FC<
       if (!nextState) return;
 
       setGameState(nextState);
-    }, REFRESH_INTERVAL);
+    }, REFRESH_RATE);
 
     return () => clearInterval(interval);
   }, [id]);

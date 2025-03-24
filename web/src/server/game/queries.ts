@@ -24,7 +24,7 @@ export const getGameContractByTransactionQuery = `
       }
     }
   }`;
-export const getContractQuery=`
+export const getContractQuery = `
     query ContractSingleHeaderQuery($identifier: BLOCKCHAIN_ADDRESS!) {
        contract(address: $identifier) {
        ...ContractDetails_Contract
@@ -55,7 +55,7 @@ export const getContractQuery=`
 `;
 
 
-export const getTransactionsQuery=`
+export const getTransactionsQuery = `
     query LatestTransactionTableQuery($filter: TransactionFilter!) {
       ...LatestTransactionTable_Fragment_Vt7Yj
     }
@@ -88,7 +88,7 @@ export const getTransactionsQuery=`
       }
 `;
 
-export const getContractStateQuery=`
+export const getContractStateQuery = `
   query ContractStateQuery($identifier: BLOCKCHAIN_ADDRESS!) {
      contract(address: $identifier) {
         publicState
@@ -98,7 +98,7 @@ export const getContractStateQuery=`
   }
 `;
 
-export const getUserStateQuery=`
+export const getUserStateQuery = `
 query CoinsQuery($address: BLOCKCHAIN_ADDRESS!
   $isInteractable: Boolean!
 ) {

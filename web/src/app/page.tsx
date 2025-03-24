@@ -1,6 +1,5 @@
 "use client"
 import { GAMES } from '@/config';
-import { GamePreviewCard } from './_components/game-preview-card';
 import { addGame } from '@/server/create-arcade/add-game';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
@@ -23,12 +22,6 @@ export default function Home() {
     <>
       <div className='flex justify-center gap-4 sm:gap-12 md:gap-24 font-medium text-secondary-foreground'>
         <div className='w-full md:w-1/3 text-center'>
-          {GAMES.map((game) => (
-            <GamePreviewCard
-              key={game.title}
-              game={game}
-            />
-          ))}
           {
             started ? <>
               <div>

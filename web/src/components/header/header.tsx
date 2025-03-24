@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC, Suspense } from 'react';
 import { Skeleton } from '../ui/skeleton';
-import { GamemasterLogo } from './gamemaster-logo';
+import { FCLogo } from './fc-logo';
 import { Profile } from './profile';
 
 export const Header: FC = async () => {
@@ -16,7 +16,7 @@ export const Header: FC = async () => {
             className='flex items-center gap-2 text-2xl font-semibold'
             href='/'
           >
-            <GamemasterLogo className='w-14 ' />
+            <FCLogo className='w-14 ' />
             <div className='hidden  md:block'>
               Flip Coin
             </div>

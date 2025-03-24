@@ -1,6 +1,6 @@
 import fireConfetti from 'canvas-confetti';
 
-const CONFETTI_COUNT = 200;
+const CONFETTI_COUNT = 250;
 const fire = (particleRatio: number, opts: Partial<confetti.Options>) => {
   fireConfetti({
     origin: { y: 0.7 },

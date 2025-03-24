@@ -9,7 +9,7 @@ import {
   useCallback,
   useState,
 } from 'react';
-import { SpinnerButton } from './spinner-button';
+import { LoadingButton } from './loading-button';
 import { Button } from './ui/button';
 import {
   Dialog,
@@ -23,7 +23,7 @@ import { ConnectWallet } from './wallet/connect-wallet';
 type MaybePromise<T> = T | Promise<T> | PromiseLike<T>;
 
 type Props = PropsWithChildren<
-  ComponentProps<typeof SpinnerButton> & {
+  ComponentProps<typeof LoadingButton> & {
     action: MaybePromise<ChainAction> | (() => MaybePromise<ChainAction>);
     revalidatePath?: string;
     onSuccess?: (txHash: string) => void;
@@ -68,7 +68,7 @@ export const ChainActionButton = ({
     throw new Error('');
   }, [action, onSuccess]);
 
-  const Component = disableLoading ? Button : SpinnerButton;
+  const Component = disableLoading ? Button : LoadingButton;
 
   return (
     <>
@@ -78,7 +78,7 @@ export const ChainActionButton = ({
             <DialogTitle>Connect Wallet</DialogTitle>
           </DialogHeader>
           <DialogDescription>
-            You need to connect your wallet to sign this transaction.
+            Please connect your wallet to authorize this transaction.
           </DialogDescription>
           <ConnectWallet />
         </DialogContent>

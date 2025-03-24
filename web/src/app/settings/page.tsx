@@ -5,11 +5,9 @@ import { getCurrentUserState } from '@/server/game/get-game-contract-by-transact
 import { fetchIdentity } from '@/server/user/cookie-auth';
 import { maskAddress } from '@/helpers';
 import { TransferButton } from '../_components/transfer-button';
-import { Input } from '@/components/ui/input';
 import GetTokenInput from '../_components/get-token-input';
 
 export default async function Page() {
-  const settings = getPendingGameSettings();
   const identity: any = await fetchIdentity();
   if (!identity) {
     return <h2>Wallet Not Connected</h2>;

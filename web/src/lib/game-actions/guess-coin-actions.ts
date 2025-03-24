@@ -3,7 +3,7 @@ import { ContractAbi } from '@partisiablockchain/abi-client';
 import { BlockchainPublicKey } from '@partisiablockchain/zk-client';
 import { BaseActions } from './base-actions';
 
-export class GuessTheNumberActions extends BaseActions {
+export class GuessCoinActions extends BaseActions {
   constructor(
     public readonly contract: string,
     address: string | undefined | null,

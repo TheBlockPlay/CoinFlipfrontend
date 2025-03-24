@@ -3,18 +3,18 @@
 import { AbiParser, ContractAbi } from '@partisiablockchain/abi-client';
 import React, { PropsWithChildren, useState } from 'react';
 
-type GamemasterContextType = {
+type FlipCoinContextType = {
   abi: ContractAbi;
 };
 
-const GamemasterContext = React.createContext<GamemasterContextType>(
+const FlipCoinContext = React.createContext<FlipCoinContextType>(
   null as any,
 );
 
-export const useGamemasterAbi = (): ContractAbi =>
-  React.useContext(GamemasterContext)!.abi;
+export const useFlipCoinAbi = (): ContractAbi =>
+  React.useContext(FlipCoinContext)!.abi;
 
-export const GamemasterProvider: React.FC<
+export const FlipCoinProvider: React.FC<
   PropsWithChildren<{ abiBuffer: string }>
 > = ({ abiBuffer, children }) => {
   const [abi] = useState(() => {
@@ -22,8 +22,8 @@ export const GamemasterProvider: React.FC<
   });
 
   return (
-    <GamemasterContext.Provider value={{ abi }}>
+    <FlipCoinContext.Provider value={{ abi }}>
       {children}
-    </GamemasterContext.Provider>
+    </FlipCoinContext.Provider>
   );
 };

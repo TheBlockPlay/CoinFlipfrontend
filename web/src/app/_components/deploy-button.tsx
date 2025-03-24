@@ -9,9 +9,6 @@ import { useEffect, useState } from 'react';
 
 const ZK_CONTRACT = process.env.CONTRACT_ADDRESS!;
 
-interface Props{
-
-}
 export const DeployButton = () => {
   const router = useRouter();
   const identity = useIdentity();
@@ -21,7 +18,7 @@ export const DeployButton = () => {
     let b= Number(window.localStorage.getItem('bet_amount')||10);
     setBetAmount(b);
   },[])
-  console.log("User Identity", identity);
+
   if (!identity) return <h6 className='text-red-600'>Please connect wallet</h6>;
 
   return (

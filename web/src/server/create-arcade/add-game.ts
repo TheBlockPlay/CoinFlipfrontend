@@ -6,7 +6,7 @@ import { getStorage, setStorage } from './storage';
 import { GameSetting } from './types';
 
 const DEFAULTS = {
-  GUESS_THE_NUMBER: {
+  GUESS_FLIP_STATE: {
     WIN_POINTS: 10,
   }
 };
@@ -18,10 +18,10 @@ const makeSetting = (game: Game): GameSetting => {
     return {
       settingId,
       gameType: game.id,
-      winPoints: DEFAULTS.GUESS_THE_NUMBER.WIN_POINTS,
+      winPoints: DEFAULTS.GUESS_FLIP_STATE.WIN_POINTS,
     };
   }
-  throw new Error('Invalid game type');
+  throw new Error('Invalid game');
 };
 
 export const addGame = async (game: Game) => {

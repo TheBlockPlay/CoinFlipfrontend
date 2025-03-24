@@ -67,7 +67,7 @@ export const ConnectWallet: FC<Props> = ({ text, className }) => {
             <DialogDescription>
               <div>
                 <p className='mt-2 text-sm font-medium text-red-700'>
-                  Error: You need to install the{' '}
+                   Error: A required package is missing. Please install it to proceed.
                   <Link
                     href={
                       'https://chromewebstore.google.com/detail/partisia-wallet/gjkdbeaiifkpoencioahhcilildpjhgh'
