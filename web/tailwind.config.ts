@@ -22,7 +22,7 @@ const config = {
         "sabotage-players": "repeat(auto-fit, minmax(130px, 1fr))"
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ['var(--font-urbanist)'],
       },
       colors: {
         border: 'hsl(var(--border))',

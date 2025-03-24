@@ -17,9 +17,9 @@ export const Header: FC = async () => {
             href='/'
           >
             <FCLogo className='w-14 ' />
-            <div className='hidden  md:block'>
+            {/* <div className='hidden  md:block'>
               Flip Coin
-            </div>
+            </div> */}
 
             <span className='text-xs text-muted-foreground text-red-800'>(mainnet)</span>
           </Link>
