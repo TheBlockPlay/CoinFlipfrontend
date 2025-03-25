@@ -6,7 +6,7 @@ import { Profile } from './profile';
 
 export const Header: FC = async () => {
   return (
-    <header className='' style={{backgroundColor:"#041e3b"}}>
+    <header className='' style={{backgroundColor:"#0B132B"}}>
       <nav
         className='grid grid-cols-3 items-center justify-between px-6 py-2 lg:px-8'
         aria-label='Global'

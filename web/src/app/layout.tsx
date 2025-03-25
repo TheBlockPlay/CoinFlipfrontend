@@ -12,7 +12,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: 'Flip Coin',
+  title: 'Block Play',
   description: '',
 };
 

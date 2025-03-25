@@ -1,31 +1,18 @@
-import Image from 'next/image';
 import React from 'react';
 
 const HowToPlay = () => {
     return (
-        <div className='p-4 mt-5' id='howToPlay'>
-            <div className='flex-col flex md:flex-row flex-wrap '>
-                <div className='w-full md:w-2/5 px-[15px]'>
-                    <div className='flex justify-center md:justify-end'>
-                        <Image className='w-100 flex md:justify-end justify-center' src={'/assets/wallets.png'} alt="" width={400} height={400} />
-                    </div>
-                </div>
-                <div className='w-full md:w-3/5 px-[15px]'>
-                    <div>
-                        <h4 className='text-info font-bold text-2xl'>How To Play</h4>
-                        <p className='text-white py-2'>Shine Coin Flip is a smart contract that allows users to play Double or Nothing with their Polygon tokens.
-                        </p>
-                        <ol className='text-white'>
-                            <li className='my-3'>Connect your Party Wallet.</li>
-                            <li>Pick either heads or tails.</li>
-                            <li  className='my-3'>Select your desired flip amount.</li>
-                            <li>Click &quot;Double or Nothing&quot;.</li>
-                            <li  className='my-3'>Click approve and wait for coin to spin.</li>
-                            <li>Congrats.</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
+        <div className="w-full ">
+            <h4 className="text-white font-semibold text-[20px] leading-[100%] tracking-[0%] mb-[40px]">How To Play</h4>
+            <p className="font-normal text-[18px] leading-[160%] tracking-[0%]">Shine Coin is a smart contract that enables users to play a Double or Nothing game using their Polygon tokens.</p>
+            <ol className="flex flex-col mt-[15px]">
+                <li className="flex mb-[10px] items-center font-semibold text-[20px] leading-[100%] tracking-[0%]"><span className="me-[10px] bg-[#009AD2] p-[5px] w-[30px] h-[30px] flex items-center justify-center rounded-full">1</span>Connect your Party Wallet</li>
+                <li className="flex mb-[10px] items-center font-semibold text-[20px] leading-[100%] tracking-[0%]"><span className="me-[10px] bg-[#009AD2] p-[5px] w-[30px] h-[30px] flex items-center justify-center rounded-full">2</span>Pick either heads or tails</li>
+                <li className="flex mb-[10px] items-center font-semibold text-[20px] leading-[100%] tracking-[0%]"><span className="me-[10px] bg-[#009AD2] p-[5px] w-[30px] h-[30px] flex items-center justify-center rounded-full">3</span>Select your desired flip amount</li>
+                <li className="flex mb-[10px] items-center font-semibold text-[20px] leading-[100%] tracking-[0%]"><span className="me-[10px] bg-[#009AD2] p-[5px] w-[30px] h-[30px] flex items-center justify-center rounded-full">4</span>Click “Double or Nothing”</li>
+                <li className="flex mb-[10px] items-center font-semibold text-[20px] leading-[100%] tracking-[0%]"><span className="me-[10px] bg-[#009AD2] p-[5px] w-[30px] h-[30px] flex items-center justify-center rounded-full">5</span>Click approve and wait coin to spin</li>
+                <li className="flex mb-[10px] items-center font-semibold text-[20px] leading-[100%] tracking-[0%]"><span className="me-[10px] bg-[#009AD2] p-[5px] w-[30px] h-[30px] flex items-center justify-center rounded-full">6</span>Congrats!</li>
+            </ol>
         </div>
     )
 }

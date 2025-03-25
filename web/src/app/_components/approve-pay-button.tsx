@@ -29,7 +29,7 @@ export const ApprovePayButton = () => {
           },500)
       }}
     >
-      Continue
+      Approve Game
     </ChainActionButton>
   );
 };
