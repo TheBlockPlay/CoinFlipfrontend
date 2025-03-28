@@ -4,8 +4,15 @@ import HowToPlay from "./_components/HowToPlay";
 import Achievement from "./_components/Achievement";
 import StartPhase from "./_components/phases/StartPhase";
 import RecentPlay from "./_components/RecentPlay";
+import { getContractState } from "@/server/partisia.client";
+import { deserializeCoinFlipState } from "@/contracts_gen/clients/flip-coin";
 
 export default async function Page() {
+  const contract: any = await getContractState(
+    process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!,
+    deserializeCoinFlipState
+  );
+  const contractState= contract?.serializedContract?.openState?.openState?.data;
   return (
     <>
       <div className="flex xl:gap-12 flex-col  md:gap-6 md:flex-col lg:flex-row xl:flex-row">
@@ -27,7 +34,9 @@ export default async function Page() {
                 <Image height={100} width={100} src="/assets/images/greenStarIcon.png" alt="greenStarIcon" className=" xl:w-[96px] xl:h-[96px] lg:w-[56px] lg:h-[56px] md:w-[35px] md:h-[35px]" />
               </div>
               <div className="flex flex-col">
-                <h4 className=" font-extrabold md:text-[24px] lg:text-[32px] text-[40px] leading-[100%] tracking-[0%]">1,234</h4>
+                <h4 className=" font-extrabold md:text-[24px] lg:text-[32px] text-[40px] leading-[100%] tracking-[0%]">
+                  {contractState?.winners.size}
+                </h4>
                 <p>Total Wins</p>
               </div>
             </div>
@@ -36,7 +45,9 @@ export default async function Page() {
                 <Image height={100} width={100} src="/assets/images/trackIcon.png" alt="trackIcon" className=" xl:w-[96px] xl:h-[96px] md:w-[35px] md:h-[35px] lg:w-[56px] lg:h-[56px]" />
               </div>
               <div className="flex flex-col">
-                <h4 className=" font-extrabold md:text-[24px] lg:text-[32px] text-[40px] leading-[100%] tracking-[0%]">45.3K</h4>
+                <h4 className=" font-extrabold md:text-[24px] lg:text-[32px] text-[40px] leading-[100%] tracking-[0%]">
+                  {contractState.userBalances?.size}
+                </h4>
                 <p>Volume</p>
               </div>
             </div>
@@ -45,7 +56,9 @@ export default async function Page() {
                 <Image height={100} width={100} src="/assets/images/usersIcon.png" alt="usersIcon" className=" xl:w-[96px] xl:h-[96px] lg:w-[56px] lg:h-[56px] md:w-[35px] md:h-[35px]" />
               </div>
               <div className="flex flex-col">
-                <h4 className=" font-extrabold md:text-[24px] lg:text-[32px] text-[40px] leading-[100%] tracking-[0%]">892</h4>
+                <h4 className=" font-extrabold md:text-[24px] lg:text-[32px] text-[40px] leading-[100%] tracking-[0%]">
+                  {contractState.playerBets?.size}
+                </h4>
                 <p>Total Player</p>
               </div>
             </div>
