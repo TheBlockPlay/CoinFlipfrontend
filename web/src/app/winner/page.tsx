@@ -7,13 +7,14 @@ import Achievement from '../_components/Achievement';
 import Accordion from "../_components/accordion";
 import Image from "next/image";
 import WinnerPhase from '../_components/phases/WinnerPhase';
+import RecentPlay from '../_components/RecentPlay';
 
 export default async function WinnerGame() {
   const identity: any = (await fetchIdentity())?.address || '';
   const address = new BlockchainAddress(Buffer.from(identity, 'hex'));
   // Fetch the contract state
   const contract: any = await getContractState(
-    process.env.CONTRACT_ADDRESS!,
+    process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!,
     deserializeCoinFlipState
   );
   const winners = contract?.serializedContract?.openState?.openState?.data?.winners;
@@ -103,36 +104,7 @@ export default async function WinnerGame() {
           <div className="w-full bg-[#222831] rounded-[30px] border border-[1.71px] border-[#EDEEEF33] p-6 mb-[20px]">
             <div className="w-full ">
               <h4 className="text-white font-semibold text-[20px] leading-[100%] tracking-[0%] mb-[40px]">Recent Plays</h4>
-              <div className="flex justify-between items-center w-full gap-3 my-[5px] border-b border-b-[#FFFFFF14] py-[12px]">
-                <div className="flex gap-3 items-center">
-                  <Image height={34} width={34} src="/assets/images/greenArrow.png" alt="greenArrow" className="" />
-                  <div className="flex flex-col">
-                    <p className="text-white font-semibold text-[16px] leading-[100%] tracking-[0%] mb-[5px]">0x1234...5678</p>
-                    <p className="text-white font-light text-[14px] leading-[100%] tracking-[0%]">heads</p>
-                  </div>
-                </div>
-                <div className="text-[#27A251] text-[16px] leading-[100%] tracking-[0%]">+0.5 MATIC</div>
-              </div>
-              <div className="flex justify-between items-center w-full gap-3 my-[5px] border-b border-b-[#FFFFFF14] py-[12px]">
-                <div className="flex gap-3 items-center">
-                  <Image height={34} width={34} src="/assets/images/redArrow.png" alt="redArrow" className="" />
-                  <div className="flex flex-col">
-                    <p className="text-white font-semibold text-[16px] leading-[100%] tracking-[0%] mb-[5px]">0x1234...5678</p>
-                    <p className="text-white font-light text-[14px] leading-[100%] tracking-[0%]">heads</p>
-                  </div>
-                </div>
-                <div className="text-[#D72638] text-[16px] leading-[100%] tracking-[0%]">+0.5 MATIC</div>
-              </div>
-              <div className="flex justify-between items-center w-full gap-3 my-[5px] border-b border-b-[#FFFFFF14] py-[12px]">
-                <div className="flex gap-3 items-center">
-                  <Image height={34} width={34} src="/assets/images/greenArrow.png" alt="greenArrow" className="" />
-                  <div className="flex flex-col">
-                    <p className="text-white font-semibold text-[16px] leading-[100%] tracking-[0%] mb-[5px]">0x1234...5678</p>
-                    <p className="text-white font-light text-[14px] leading-[100%] tracking-[0%]">heads</p>
-                  </div>
-                </div>
-                <div className="text-[#27A251] text-[16px] leading-[100%] tracking-[0%]">+0.5 MATIC</div>
-              </div>
+              <RecentPlay />
             </div>
           </div>
           <div className="w-full bg-[#222831] rounded-[30px] border border-[1.71px] border-[#EDEEEF33] p-6 mb-[20px]">

@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import BetAmount from './BetAmount';
 import clsx from 'clsx';
 
-const ZK_CONTRACT = process.env.CONTRACT_ADDRESS!;
+const ZK_CONTRACT = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!;
 
 export const DeployButton = () => {
   const router = useRouter();

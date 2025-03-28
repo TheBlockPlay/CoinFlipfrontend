@@ -12,7 +12,7 @@ export default function RecentPlay() {
     }, []);
 
     const getTransactions = async () => {
-        const transactionData = await getTransactionsByAddress(process.env.CONTRACT_ADDRESS!);
+        const transactionData = await getTransactionsByAddress(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!);
         setTransactions(transactionData)
         console.log(transactionData)
     }
