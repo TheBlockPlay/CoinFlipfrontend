@@ -73,7 +73,7 @@ export type PublicContractState<State> = ContractData<
 
 const numberOfShards = 3;
 
-const READER_URL = process.env.READER_URL;
+const READER_URL = process.env.NEXT_PUBLIC_READER_URL;
 export const getContractState = async <T = string>(
   contract: string,
   stateMapper?: (state: StateBytes) => T,

@@ -20,11 +20,12 @@ export const Profile: FC = async () => {
     return <ConnectWallet />;
   }
   const { account } = await getCurrentUserState(user?.address);
+
   return (
     <div className='flex items-center gap-2'>
       <span className='flex'>
         <DollarSign /> 
-       {account?.mpc20Balances.find((m:any)=>m?.symbol==process.env.TOKEN_CODE)?.balance|| 0}
+       {account?.mpc20Balances.find((m:any)=>m?.symbol==process.env.NEXT_PUBLIC_TOKEN_CODE)?.balance|| 0}
       </span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>

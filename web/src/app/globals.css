@@ -70,6 +70,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -122,7 +123,7 @@
   }
 }
 
-body{
+body {
   background-color: #0B132B;
   color: aliceblue;
 }
@@ -131,10 +132,13 @@ body{
   html {
     background-color: #0B132B !important;
   }
+
   .bg-background {
     background-color: #0B132B !important;
   }
-  header, main {
+
+  header,
+  main {
     max-width: 2000px;
     margin: auto;
   }
@@ -164,7 +168,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 30px;
   height: 30px;
   background: #4d7c0f;
-  border: 4px solid #fff; 
+  border: 4px solid #fff;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
@@ -185,4 +189,10 @@ input[type="range"]::-moz-range-thumb {
 
 input[type="range"]::-webkit-progress-bar {
   background: #4d7c0f;
+}
+
+.recent-plays-overflow {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: none;
 }

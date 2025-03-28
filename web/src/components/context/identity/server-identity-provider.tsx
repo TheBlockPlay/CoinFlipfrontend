@@ -6,6 +6,5 @@ export const ServerIdentityProvider: FC<PropsWithChildren> = async ({
   children,
 }) => {
   const identity = await fetchIdentity();
-
   return <IdentityProvider identity={identity}>{children}</IdentityProvider>;
 };

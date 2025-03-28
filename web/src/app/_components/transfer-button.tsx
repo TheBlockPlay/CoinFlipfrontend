@@ -6,7 +6,7 @@ import { getGameContractByTransaction } from '@/server/game/get-game-contract-by
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const ZK_CONTRACT = process.env.TOKEN_ADDRESS!;
+const ZK_CONTRACT = process.env.NEXT_PUBLIC_TOKEN_ADDRESS!;
 
 export const TransferButton = () => {
   const [amount,setAmount]=useState<any>(10);

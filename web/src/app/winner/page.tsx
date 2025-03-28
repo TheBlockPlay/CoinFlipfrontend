@@ -13,7 +13,7 @@ export default async function WinnerGame() {
   const address = new BlockchainAddress(Buffer.from(identity, 'hex'));
   // Fetch the contract state
   const contract: any = await getContractState(
-    process.env.CONTRACT_ADDRESS!,
+    process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!,
     deserializeCoinFlipState
   );
   const winners = contract?.serializedContract?.openState?.openState?.data?.winners;

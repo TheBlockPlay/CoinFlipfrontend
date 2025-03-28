@@ -12,7 +12,7 @@ export const getGameContractByTransaction = async (txHash: string) => {
   };
 
   const response = await fetch(
-    'https://backend.browser.partisiablockchain.com/graphql/query',
+    String(process.env.NEXT_PUBLIC_GRAPHQL_URL),
     {
       method: 'POST',
       headers: {
@@ -52,7 +52,7 @@ export const getContractByAddress = async (contract: string) => {
   };
 
   const response = await fetch(
-    'https://backend.browser.partisiablockchain.com/graphql/query',
+    String(process.env.NEXT_PUBLIC_GRAPHQL_URL),
     {
       method: 'POST',
       headers: {
@@ -85,7 +85,7 @@ export const getTransactionsByAddress = async (contract: string) => {
   };
 
   const response = await fetch(
-    'https://backend.browser.partisiablockchain.com/graphql/query',
+    String(process.env.NEXT_PUBLIC_GRAPHQL_URL),
     {
       method: 'POST',
       headers: {
@@ -115,7 +115,7 @@ export const getCurrentContractsState = async (contract: string) => {
   };
 
   const response = await fetch(
-    'https://backend.browser.partisiablockchain.com/graphql/query',
+    String(process.env.NEXT_PUBLIC_GRAPHQL_URL),
     {
       method: 'POST',
       headers: {
@@ -144,7 +144,7 @@ export const getCurrentUserState = async (address: string) => {
   };
 
   const response = await fetch(
-    'https://backend.browser.partisiablockchain.com/graphql/query',
+    String(process.env.NEXT_PUBLIC_GRAPHQL_URL),
     {
       method: 'POST',
       headers: {

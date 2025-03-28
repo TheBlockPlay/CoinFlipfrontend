@@ -6,9 +6,9 @@ import { payoutApprove } from '@/server/create-arcade/deploy-game';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const ZK_CONTRACT = process.env.CONTRACT_ADDRESS!;
 
 export const ApprovePayButton = () => {
+  const ZK_CONTRACT = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!;
   const [betAmount,setBetAmount]=useState<any>(10);
   const router = useRouter();
   const identity = useIdentity();

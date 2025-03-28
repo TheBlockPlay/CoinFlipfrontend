@@ -29,7 +29,7 @@ export const ConnectWallet: FC<Props> = ({ text, className }) => {
           try {
             const sdk = new PartisiaSdk();
             await sdk.connect({
-              chainId: 'Partisia Blockchain',
+              chainId: 'Partisia Blockchain Testnet',
               permissions: ['sign' as any],
               dappName: 'Flip Coin',
             });
@@ -38,7 +38,7 @@ export const ConnectWallet: FC<Props> = ({ text, className }) => {
 
             const { connection, seed } = sdk;
             if (!connection) return false;
-
+            console.log("connection", connection)
             await login({
               kind: 'partisia',
               address: connection.account.address,

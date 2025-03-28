@@ -2,6 +2,8 @@
 "use client";
 import { ACTIONS } from '@/constants';
 import { getTransactionsByAddress } from '@/server/game/get-game-contract-by-transaction'
+import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 export default function RecentPlay() {
@@ -12,35 +14,27 @@ export default function RecentPlay() {
     }, []);
 
     const getTransactions = async () => {
-        const transactionData = await getTransactionsByAddress(process.env.CONTRACT_ADDRESS!);
+        const transactionData = await getTransactionsByAddress(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!);
         setTransactions(transactionData)
-        console.log(transactionData)
     }
     return (
-        <div id='recentPlay'>
-            <div className='w-100 col-md-8 com-sm-12 border border-info  p-5 m-5'>
-                <h4 className='text-center text-info mb-3 font-bold' >Recent plays</h4>
-                {
-                    transactions.length === 0 ?
-                        <p className='text-center text-muted'>No recent plays found.</p> :
-                        transactions.map((transaction: any, index) => (
-                            <div key={index} className='border rounded mb-2 p-2 border-bottom'>
-                                <div className='flex justify-between'>
-                                    <p className='text-muted'>Transaction Hash: {transaction.node?.identifier}</p>
-                                    <a className='text-muted' href={url + transaction.node?.identifier} >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right text-hover-link-primary" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div className='flex justify-between'>
-                                    <p className='text-info'>Action: {ACTIONS[transaction?.node?.event?.action]}</p>
-                                    <p className='text-info'>Date: {new Date(+transaction?.node?.productionTime).toLocaleString()}</p>
-                                </div>
+        <div className='recent-plays-overflow'>
+            {
+                transactions.length ? transactions.map((transaction: any, index) =>
+                    <div key={index} className="flex justify-between items-center w-full gap-3 my-[5px] border-b border-b-[#FFFFFF14] py-[12px]">
+                        <div className="flex gap-3 items-center">
+                            <Image height={34} width={34} src="/assets/images/greenArrow.png" alt="greenArrow" className="" />
+                            <div className="flex flex-col">
+                                <Link href={url + transaction.node?.identifier} passHref={true} target='blank' ><p className="text-white font-semibold text-[16px] leading-[100%] tracking-[0%] mb-[5px]">
+                                    {transaction.node?.identifier?.slice(0,12)} ***
+                                </p></Link>
+                                <p className="text-white font-light text-[14px] leading-[100%] tracking-[0%]">{ACTIONS[transaction?.node?.event?.action]}</p>
                             </div>
-                        ))
-                }
-            </div>
+                        </div>
+                        <div className="text-[#27A251] text-[16px] leading-[100%] tracking-[0%]">{transaction?.node?.event?.cost} MATIC</div>
+                    </div>
+                ) : <><p className='text-center text-muted'>No recent plays found.</p></>
+            }
         </div>
     )
 }
