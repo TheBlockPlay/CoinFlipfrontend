@@ -1,4 +1,4 @@
-import { ISdkConnection } from 'partisia-blockchain-applications-sdk/lib/sdk';
+import { ISdkConnection } from 'partisia-blockchain-applications-sdk/dist/sdk';
 
 export type PartisiaWallet = {
   kind: 'partisia';

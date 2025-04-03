@@ -10,7 +10,9 @@ import GetTokenInput from '../_components/get-token-input';
 export default async function Page() {
   const identity: any = await fetchIdentity();
   if (!identity) {
-    return <h2>Wallet Not Connected</h2>;
+    return <div className='wallet-not-connected'>
+       <h2>Wallet Not Connected</h2>
+    </div>;
   }
   const { account } = await getCurrentUserState(identity?.address);
 

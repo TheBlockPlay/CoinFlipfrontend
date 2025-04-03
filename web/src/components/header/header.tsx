@@ -6,7 +6,7 @@ import { Profile } from './profile';
 
 export const Header: FC = async () => {
   return (
-    <header className='' style={{backgroundColor:"#0B132B"}}>
+    <header className='' style={{backgroundColor:"#021730"}}>
       <nav
         className='grid grid-cols-3 items-center justify-between px-6 py-2 lg:px-8'
         aria-label='Global'
@@ -17,10 +17,6 @@ export const Header: FC = async () => {
             href='/'
           >
             <FCLogo className='w-14 ' />
-            {/* <div className='hidden  md:block'>
-              Flip Coin
-            </div> */}
-
             <span className='text-xs text-muted-foreground text-red-800'>(mainnet)</span>
           </Link>
         </div>

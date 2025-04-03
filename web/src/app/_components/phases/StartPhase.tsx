@@ -19,7 +19,7 @@ const StartPhase = () => {
                     value={betAmount}
                     onChange={(e) => changeBetAmount(e.target.value)}
                 />
-                <label>Matic</label>
+                <label>PBT</label>
             </div>
             <input type="range" min="5" value={betAmount} max="10000" className="w-full"
                 onChange={(e) => changeBetAmount(e.target.value)} />

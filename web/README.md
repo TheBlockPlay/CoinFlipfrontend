@@ -1,6 +1,6 @@
-# Flip Coin UI
+# Block Play UI
 
-This directory contains the frontend code for the Flip Coin project.
+This directory contains the frontend code for the Block Play project.
 
 The frontend is deployed on both Netlify and Vercel and is currently configured to work with the Partisia Blockchain.
 
@@ -18,7 +18,7 @@ pnpm dev
 ```
 
 ## Architecture
-The frontend of the Flip Coin project interacts with the Partisia Blockchain, which serves as the backend. The architecture of the frontend is illustrated in the following diagram:
+The frontend of the Block Play project interacts with the Partisia Blockchain, which serves as the backend. The architecture of the frontend is illustrated in the following diagram:
 
 ![Architecture](./docs/web-architecture.png)
 

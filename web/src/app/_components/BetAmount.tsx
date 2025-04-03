@@ -12,7 +12,7 @@ const BetAmount = () => {
             <input className="bg-transparent" readOnly type="number" min={5} max={10000}
                 value={amount}
             />
-            <label>Matic</label>
+            <label>PBT</label>
         </div>
     )
 }

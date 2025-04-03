@@ -30,7 +30,7 @@ const Achievement = () => {
                                 <p className="text-white font-semibold text-[16px] leading-[100%] tracking-[0%] mb-[5px]">45%</p>
                             </div>
                             <progress className="w-full my-[5px] h-2  [&::-webkit-progress-bar]:rounded-[20px] [&::-webkit-progress-value]:rounded-[20px] [&::-moz-progress-bar]:rounded-[20px] appearance-none [&::-webkit-progress-bar]:bg-gray-300 [&::-webkit-progress-value]:bg-[#0BB6CE] [&::-moz-progress-bar]:bg-[#0BB6CE] rounded-full" value={45} max={100} />
-                            <p className="text-white font-light text-[14px] leading-[100%] tracking-[0%]">Bet 100 Matic in total</p>
+                            <p className="text-white font-light text-[14px] leading-[100%] tracking-[0%]">Bet 100 PBT in total</p>
                         </div>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ export default async function Page() {
                         <h4 className="text-white font-semibold text-[20px] leading-[100%] tracking-[0%]">Bet Amount</h4>
                             <div className="flex justify-between items-center w-full gap-3 my-[20px] border border-[1.71px] border-[#EDEEEF33] p-[14px] rounded-[8px]">
                                 <label>0.1</label>
-                                <label>Matic</label>
+                                <label>PBT</label>
                             </div>
                         <input type="range" min="0" max="100" className="w-full" />
                         <button className="flex justify-center mt-[30px] gap-3 items-center bg-[#F4C542] border border-[#F4C542] hover:text-[#F4C542] hover:bg-transparent p-[14px] w-full rounded-[8px] text-white font-semibold text-[16px] leading-[100%] tracking-[0%] text-center transition duration-300">Flip Coin 

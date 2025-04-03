@@ -31,7 +31,7 @@ export const ConnectWallet: FC<Props> = ({ text, className }) => {
             await sdk.connect({
               chainId: 'Partisia Blockchain',
               permissions: ['sign' as any],
-              dappName: 'Flip Coin',
+              dappName: 'Block Play',
             });
 
             setError(undefined);

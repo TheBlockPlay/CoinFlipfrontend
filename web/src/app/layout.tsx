@@ -32,10 +32,10 @@ export default function RootLayout({
       <head>
         <link
           rel='icon'
-          type='image/svg+xml'
+          type='image/svg'
           href='/assets/favicon/favicon.svg'
         />
-        <link rel='icon' type='image/png' href='/assets/favicon/favicon.png' />
+        <link rel='icon' href='/assets/favicon/favicon.ico' />
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap" rel="stylesheet"/>
 
       </head>
