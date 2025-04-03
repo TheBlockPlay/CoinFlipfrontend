@@ -20,7 +20,7 @@ export default async function Page() {
           <div className="max-md:flex-col max-md:gap-4 flex bg-[url('../../public/assets/images/topBg.png')] rounded-[20px] bg-cover bg-center p-6  md:gap-5 border border-[#EDEEEF14]">
             <div className="md:w-3/5 lg:w-3/5 xl:w-2/3  flex justify-center items-center w-full">
               <div className="flex justify-center items-center w-full">
-                <Image height={200} width={300} src="/assets/images/ringDollor.png" alt="ringDollor" className="" />
+                <Image height={200} width={300} src="/assets/images/ringDollor.svg" alt="ringDollor" className="" />
               </div>
             </div>
             <div className="md:w-2/5 lg:w-2/5 xl:w-1/3 bg-[#FCFCFC14] rounded-[30px]  border border-[1.71px] border-[#EDEEEF33] p-6">
@@ -31,7 +31,7 @@ export default async function Page() {
           <div className="rounded-[16px] bg-[#222834] max-md:flex-col max-md:gap-[1rem] my-[20px] flex justify-between p-[8px] flex md:gap-5 border border-[#EDEEEF14]">
             <div className="bg-[#2DBE60] w-full lg:px-[12px] py-[20px] px-[22px] flex items-center gap-3 rounded-[12px]">
               <div className="">
-                <Image height={100} width={100} src="/assets/images/greenStarIcon.png" alt="greenStarIcon" className=" xl:w-[96px] xl:h-[96px] lg:w-[56px] lg:h-[56px] md:w-[35px] md:h-[35px]" />
+                <Image height={100} width={100} src="/assets/images/greenStarIcon.svg" alt="greenStarIcon" className=" xl:w-[96px] xl:h-[96px] lg:w-[56px] lg:h-[56px] md:w-[35px] md:h-[35px]" />
               </div>
               <div className="flex flex-col">
                 <h4 className=" font-extrabold md:text-[24px] lg:text-[32px] text-[40px] leading-[100%] tracking-[0%]">
@@ -42,7 +42,7 @@ export default async function Page() {
             </div>
             <div className="bg-[#80B342] w-full lg:px-[12px] py-[20px] px-[22px] flex items-center gap-3 rounded-[12px]">
               <div className="">
-                <Image height={100} width={100} src="/assets/images/trackIcon.png" alt="trackIcon" className=" xl:w-[96px] xl:h-[96px] md:w-[35px] md:h-[35px] lg:w-[56px] lg:h-[56px]" />
+                <Image height={100} width={100} src="/assets/images/trackIcon.svg" alt="trackIcon" className=" xl:w-[96px] xl:h-[96px] md:w-[35px] md:h-[35px] lg:w-[56px] lg:h-[56px]" />
               </div>
               <div className="flex flex-col">
                 <h4 className=" font-extrabold md:text-[24px] lg:text-[32px] text-[40px] leading-[100%] tracking-[0%]">
@@ -53,7 +53,7 @@ export default async function Page() {
             </div>
             <div className="bg-[#009CD3] w-full lg:px-[12px] py-[20px] px-[22px] flex items-center gap-3 rounded-[12px]">
               <div className="">
-                <Image height={100} width={100} src="/assets/images/usersIcon.png" alt="usersIcon" className=" xl:w-[96px] xl:h-[96px] lg:w-[56px] lg:h-[56px] md:w-[35px] md:h-[35px]" />
+                <Image height={100} width={100} src="/assets/images/usersIcon.svg" alt="usersIcon" className=" xl:w-[96px] xl:h-[96px] lg:w-[56px] lg:h-[56px] md:w-[35px] md:h-[35px]" />
               </div>
               <div className="flex flex-col">
                 <h4 className=" font-extrabold md:text-[24px] lg:text-[32px] text-[40px] leading-[100%] tracking-[0%]">
